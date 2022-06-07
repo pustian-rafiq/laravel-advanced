@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\MailController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +20,8 @@ Route::get('/', function () {
 });
 
 Route::post('add/form',[FormController::class,'index'])->name('add.form');
+
+// send mail
+// Route::get('send-mail', [MailController::class, 'sendEmail']);
+
+Route::get('sendbasicemail',[MailController::class, 'basic_email']);
